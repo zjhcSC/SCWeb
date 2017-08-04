@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <contextName>my</contextName>
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%d][%-5level][%thread]%logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.apache.ibatis" level="info"/>
+    <logger name="com.alibaba.druid" level="info"/>
+    <logger name="com.zjhc" level="debug"/>
+    <logger name="com.zjhc.shiro.cache.EhcacheManagerWrapper" level="info"/>
+
+    <!-- 日志输出级别 -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
